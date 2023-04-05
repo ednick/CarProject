@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using CarProject.Domain.Entities;
-using EntityFramework.CodeFirst.Migrations;
+
 
 namespace CarProject.Domain
 {
