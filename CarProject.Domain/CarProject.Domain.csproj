@@ -95,6 +95,8 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="ConfigureServices.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\ICar.cs" />
     <Compile Include="Migrations\ApplicationDbInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
