@@ -6,7 +6,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace EntityFramework.CodeFirst.Entities
+namespace CarProject.Domain.Entities
 {
     public abstract class BaseEntity
     {
