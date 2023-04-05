@@ -51,5 +51,15 @@ namespace CarProject.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("GetAllCars")]
+        [SwaggerOperation("GetAllCars")]
+        [SwaggerResponse(HttpStatusCode.OK, "List of all cars", typeof(List<Car>))]
+        public IHttpActionResult GetAllCars()
+        {
+            var cars = _carService.GetAllCarsAsync();
+            return Ok(cars);
+        }
+
     }
 }
