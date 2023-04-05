@@ -29,5 +29,16 @@ namespace CarProject.API.Controllers
             var createdCar = _carService.AddCarAsync(car);
             return Ok(createdCar);
         }
+
+        [System.Web.Http.HttpPatch]
+        [System.Web.Http.Route("{id:int}")]
+        [SwaggerOperation("UpdateCar")]
+        [SwaggerResponse(HttpStatusCode.OK, "Car updated", typeof(Car))]
+        public IHttpActionResult UpdateCar(int id, [FromBody] Car carPatch)
+        {
+            var updatedCar = _carService.UpdateCarAsync(id, carPatch);
+            return Ok(updatedCar);
+        }
+
     }
 }
