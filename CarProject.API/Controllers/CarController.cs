@@ -10,6 +10,7 @@ using Swashbuckle.Swagger.Annotations;
 
 namespace CarProject.API.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/car")]
     public class CarController : ApiController
     {
