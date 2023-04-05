@@ -20,8 +20,8 @@ namespace CarProject.API.Controllers
         }
 
 
-        [System.Web.Http.HttpPost]
-        [System.Web.Http.Route("CreateCar")]
+        [HttpPost]
+        [Route("CreateCar")]
         [SwaggerOperation("CreateCar")]
         [SwaggerResponse(HttpStatusCode.OK, "Car created", typeof(Car))]
         public IHttpActionResult CreateCar(Car car)
@@ -30,8 +30,8 @@ namespace CarProject.API.Controllers
             return Ok(createdCar);
         }
 
-        [System.Web.Http.HttpPatch]
-        [System.Web.Http.Route("{id:int}")]
+        [HttpPatch]
+        [Route("{id:int}")]
         [SwaggerOperation("UpdateCar")]
         [SwaggerResponse(HttpStatusCode.OK, "Car updated", typeof(Car))]
         public IHttpActionResult UpdateCar(int id, [FromBody] Car carPatch)
@@ -39,6 +39,17 @@ namespace CarProject.API.Controllers
             var updatedCar = _carService.UpdateCarAsync(id, carPatch);
             return Ok(updatedCar);
         }
+
+        [HttpGet]
+        [Route("GetCarsByYear")]
+        [SwaggerOperation("GetCarsByYear")]
+        [SwaggerResponse(HttpStatusCode.OK, "List of cars", typeof(List<Car>))]
+        public IHttpActionResult GetCarsByYear(int year)
+        {
+            var cars = _carService.GetCarsByYearAsync(year);
+            return Ok(cars);
+        }
+
 
     }
 }
