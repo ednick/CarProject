@@ -98,10 +98,18 @@
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Entities\ICar.cs" />
     <Compile Include="ICarContext.cs" />
+    <Compile Include="Migrations\202304051929116_initialMigration.cs" />
+    <Compile Include="Migrations\202304051929116_initialMigration.designer.cs">
+      <DependentUpon>202304051929116_initialMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202304051929116_initialMigration.resx">
+      <DependentUpon>202304051929116_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
